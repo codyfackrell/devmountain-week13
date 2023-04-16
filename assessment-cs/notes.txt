@@ -1,0 +1,17 @@
+Insert Function (.unshift): 
+tinyArray: 144.121 μs
+smallArray: 64.807 μs
+mediumArray: 221.437 μs
+largeArray: 13.673246 ms
+extraLargeArray: 1.918361422 s
+
+Append Function (.push): 
+tinyArray: 133.544 μs
+smallArray: 153.896 μs
+mediumArray: 267.394 μs
+largeArray: 714.094 μs
+extraLargeArray: 4.212774 ms
+
+Based on the results above, the append function seems to scale better compared to the insert function. In three of the five tests, the append function was faster than the insert function. 
+
+This insert function is slower because it uses the .unshift method which puts the number at the start of the array. To move the number to the beginning of the array it has to move it one by one until its at the start of the array. Depending on the length of the array, it can take awhile as we see in the resutls. 
